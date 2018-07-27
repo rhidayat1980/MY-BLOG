@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="RHidayat">
+    <meta name="description" content="RHidayat&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="http://www.example.com">
+    <title>
+  Review Rust Cookbook bagian 1 · RHidayat
+</title>
+
+    <link rel="canonical" href="http://www.example.com/posts/rust/review-rust-cookbook-bagian-1/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="http://www.example.com/css/style.min.css">
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://www.example.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://www.example.com/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.45.1" />
+  </head>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://www.example.com/">
+      RHidayat
+    </a>
+    <input type="checkbox" id="menu-control"/>
+    <label class="menu-mobile  float-right " for="menu-control">
+      <span class="btn-mobile  float-right ">&#9776;</span>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="http://www.example.com/about/">About</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="http://www.example.com/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="http://www.example.com/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="http://www.example.com/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            <li class= " mobile-menu-lang-separator-centered ">
+              <hr />
+            </li>
+          
+          
+            
+          
+            
+              
+                
+                  <li class="multilingual-separator">
+                    <p>|</p>
+                  </li>
+                
+                
+              
+              <li class="navigation-item  align-center ">
+                <a href="http://www.example.com/pl/">Indonesia</a>
+              </li>
+            
+          
+        
+      </ul>
+    </label>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">Review Rust Cookbook bagian 1</h1>
+      <h2 class="date">July 27, 2018</h2>
+
+      
+    </header>
+
+    
+
+<p>Jadi ceritanya malam ini karena dede inara ga bisa tidur, akhirnya saya kebagian nemenin anak ini sampai dia ngantuk lagi.</p>
+
+<p>Sambil nemenin dede inara saya putuskan untuk baca buku rust, <code>Rust Cookbook by Vigneshwer Dhinakaran</code>, lumayan pikir saya.</p>
+
+<p>Oke sesuai judulnya review buku, maka saya akan coba untuk mereview buku ini. Buku <code>rust cookbook</code> ini terdiri dari beberapa bab, di bagi menjadi dua bagian, bagian pertama berisi tentang basic thiing in rust seperti:</p>
+
+<h3 id="settting-up-rust-in-windows-linux-dan-mac">settting up Rust in Windows, Linux dan Mac</h3>
+
+<p>bagian ini sesuai judulnya si <code>Vigneshwer Dhinakaran</code> ngasi tau soal cara instalasi rust di beberapa platform system operasi. ga ada yg istimewa sih di bab ini, karena gw bisa liat langsung di webnya rust [<a href="https://www.rust-lang.org/en-US/install.html">https://www.rust-lang.org/en-US/install.html</a>]</p>
+
+<p>perintahnya juga simple sih</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://sh.rustup.rs -sSf | sh</code></pre></div>
+<p>kalo lo udah berhasil nginstall rust bisa langsung cek pake command ini</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rustc --version
+rustc <span style="color:#ff0;font-weight:bold">1</span>.27.2 (58cc626de <span style="color:#ff0;font-weight:bold">2018</span>-07-18)</code></pre></div>
+<p>by default ketika lo nginstall rust dia akan ngasih lu compiler(rustc), cargo atau tool yg lu pake untuk manage semua code rust lo, mulai dari scafolding, manage dependency, testing dan compile. jadi si rustc jarang lo pake juga sih, kecuali kalo lo ga mau pake cargo misalnya untuk prototype yg sederhana kaya contoh dibawah. yg lo dapat juga selain compiler dan cargo adalah rustup.</p>
+
+<p>si rustup ini keren sih menerut gw, nih contohnya</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rustup update
+rustup doc</code></pre></div>
+<p>fungsi ke dua perintah diatas adalah yg pertama ngapdate rust version, dan yg kedua lo bisa dapat dokumentasi rust di komputer lo, lumayan buat ngurangin ketergantungan sama internet, kaya pas lagi di perjalan dalam pesawat atau kereta api, cobain deh!</p>
+
+<h3 id="creating-your-first-program-in-rust">creating your first program in rust</h3>
+
+<p>bagian ini si penulis nasih contoh gimana cara bikin program sederhana di rust.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir rust_cookbook
+<span style="color:#fff;font-weight:bold">cd</span> rust_cookbook
+touch sample.rs</code></pre></div>
+<p>lalu open sesuai editor kesukaanmu, content nya seperti dibawah ini</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#fff;font-weight:bold">fn</span> main(){
+  println!(<span style="color:#0ff;font-weight:bold">&#34;Welcome to Rust Cookbook&#34;</span>);
+}
+</code></pre></div>
+<p>save lalu jalanin perintah ini</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rustc sample.rs</code></pre></div>
+<p>proses compiling diatas ngasilin sebuah binary code dengan nama sample, kalo di windows ya sample.exe , udah lama banget gw ga liat .exe :)</p>
+
+<p>cara jalaninnya kalo di linux atau mac ya</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./sample</code></pre></div>
+<p>akan ngasillin <code>Welcome to Rust Cookbook</code></p>
+
+<h3 id="defining-a-variable-assignment">defining a variable assignment</h3>
+
+<p>dibagian ini layaknya buku-buku programming lainnya, biasanya dimulai dengan variable assignment.</p>
+
+<p>contoh yang ada dibuku ini kira-kira seperti ini
+bikin file <code>assignment.rs</code> lalu paste content dibawah ini.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#007f7f">// Primitive libraries in rust
+</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">use</span> std::{<span style="color:#fff;font-weight:bold">i8</span>,<span style="color:#fff;font-weight:bold">i16</span>,<span style="color:#fff;font-weight:bold">i32</span>,<span style="color:#fff;font-weight:bold">i64</span>,<span style="color:#fff;font-weight:bold">u8</span>,<span style="color:#fff;font-weight:bold">u16</span>,<span style="color:#fff;font-weight:bold">u32</span>,<span style="color:#fff;font-weight:bold">u64</span>,<span style="color:#fff;font-weight:bold">f32</span>,<span style="color:#fff;font-weight:bold">f64</span>,<span style="color:#fff;font-weight:bold">isize</span>,<span style="color:#fff;font-weight:bold">usize</span>};
+<span style="color:#fff;font-weight:bold">use</span> std::io::stdin;
+
+<span style="color:#fff;font-weight:bold">fn</span> main() {
+    println!(<span style="color:#0ff;font-weight:bold">&#34;Understanding assignment&#34;</span>);
+    <span style="color:#007f7f">// Compiler will automatically figure out the data type if not mentioned
+</span><span style="color:#007f7f"></span>    <span style="color:#007f7f">// Cannot change the value
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">let</span> num =<span style="color:#ff0;font-weight:bold">10</span>;
+    println!(<span style="color:#0ff;font-weight:bold">&#34;Num is {}&#34;</span>, num);
+
+    <span style="color:#fff;font-weight:bold">let</span> age: <span style="color:#fff;font-weight:bold">i32</span> =<span style="color:#ff0;font-weight:bold">40</span>;
+    println!(<span style="color:#0ff;font-weight:bold">&#34;Age is {}&#34;</span>, age);
+    <span style="color:#007f7f">// Prints the max and min value of 32bit integer
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;Max i32 {}&#34;</span>,<span style="color:#fff;font-weight:bold">i32</span>::MAX);
+    println!(<span style="color:#0ff;font-weight:bold">&#34;Max i32 {}&#34;</span>,<span style="color:#fff;font-weight:bold">i32</span>::MIN);
+
+    <span style="color:#007f7f">// Another way of variable assigning
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">let</span>(f_name,l_name)=(<span style="color:#0ff;font-weight:bold">&#34;viki&#34;</span>,<span style="color:#0ff;font-weight:bold">&#34;d&#34;</span>);
+    println!(<span style="color:#0ff;font-weight:bold">&#34;First name {0} and last name {1}&#34;</span>,f_name,l_name);
+}
+</code></pre></div>
+<p>save lalu kamu bisa compile pake rustc assignment.rs
+jalanin pake <code>./assignment</code> outputnya kamu coba sendiri yah :P</p>
+
+<p>pelajaran yg bisa gw dapat adalah, <code>use</code> untuk import bahkan standard lib, beda bgt sama elixir :), lalu setiap program pasti dimulai dengan <code>fn main()</code>, lalu ada <code>let</code> yang bisa di pakai dengan cara yg unik <code>let(f_name,l_name)=(&quot;viki&quot;,&quot;d&quot;);</code> which is ini pattern matching cuy! dan <code>println!</code>, dan terakhir interpolation dengan <code>{}</code>.</p>
+
+<p>gw ga akan detilin jelasinnya yah, lo beli aja bukunya cuy hehehe.</p>
+
+<h3 id="setting-up-boolean-and-character-types">setting up boolean and character types</h3>
+
+<p>Bagian ini ngasitau salah dua data types yang ada di rust, boolean dan character.
+boolean ada <code>false</code> dan <code>true</code> sedangkan char membernya ada banyak dan dia ga jelasin apa aja yg masuk character di rust hehehe, not good.</p>
+
+<p>cotoh program yg di pakai di bab ini adalah <code>boolean-char.rs</code></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#fff;font-weight:bold">fn</span> main(){
+
+    <span style="color:#007f7f">//Setting boolean and character types
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">let</span> bool_val: <span style="color:#fff;font-weight:bold">bool</span> = <span style="color:#fff;font-weight:bold">true</span>;
+    <span style="color:#fff;font-weight:bold">let</span> x_char: char = <span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>;
+
+    <span style="color:#007f7f">// Printing the character
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;x char is {}&#34;</span>, x_char);
+    println!(<span style="color:#0ff;font-weight:bold">&#34;Bool value is {}&#34;</span>, bool_val);
+}
+</code></pre></div>
+<p>save dan compile pake <code>rustc boolean-char.rs</code> lalu jalanin pake ./boolean-char dan lihat hasilnya.</p>
+
+<h3 id="controlling-decimal-points-number-formats-and-named-arguments">Controlling decimal points, number formats, and named arguments</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#fff;font-weight:bold">fn</span> main(){
+    <span style="color:#007f7f">// Prints the first 2 numbers after the decimal points
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;{:.2}&#34;</span>,<span style="color:#ff0;font-weight:bold">1.2345</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;================&#34;</span>);
+
+    <span style="color:#007f7f">// print the binary hex and octal format
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;B: {:b} H: {:x} O: {:o}&#34;</span>,<span style="color:#ff0;font-weight:bold">10</span>,<span style="color:#ff0;font-weight:bold">10</span>,<span style="color:#ff0;font-weight:bold">10</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;================&#34;</span>);
+
+    <span style="color:#007f7f">// Shifts
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;{ten:&gt;ws$}&#34;</span>,ten=<span style="color:#ff0;font-weight:bold">10</span>, ws=<span style="color:#ff0;font-weight:bold">5</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;{ten:&gt;0ws$}&#34;</span>,ten=<span style="color:#ff0;font-weight:bold">10</span>, ws=<span style="color:#ff0;font-weight:bold">5</span> );
+}
+</code></pre></div>
+<p>lo harus mulai kuat liat karakter2 aneh cuy. kaya <code>{:.2}, 1.2345</code>, ini maksudnya lo hanya mau ngeprint 2 desimal dibelakang koma. lainnya lo cari tau sendiri yah soal converting decimal ke biner, hexa dan octal, yg terakhir itu shifting aja sih sebanyak 5 white spaces, <code>ws</code> disini white spaces, ekspresi terakhir itu ganti whitespace nya dengan angka 0.</p>
+
+<h3 id="performing-arithmetic-operations">Performing arithmetic operations</h3>
+
+<p>bab ini ngasih contoh operasi matematika, dengan operator-operator standar. bikin file <code>arithmetic.rs</code> lalu isi kaya gini</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#fff;font-weight:bold">fn</span> main(){
+    <span style="color:#007f7f">// Arithmetic Operations
+</span><span style="color:#007f7f"></span>    println!(<span style="color:#0ff;font-weight:bold">&#34;5 + 4 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">5</span>+<span style="color:#ff0;font-weight:bold">4</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;5 - 4 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">5</span>-<span style="color:#ff0;font-weight:bold">4</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;5 * 4 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">5</span>*<span style="color:#ff0;font-weight:bold">4</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;5 / 4 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">5</span>/<span style="color:#ff0;font-weight:bold">4</span> );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;5 % 4 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">5</span>%<span style="color:#ff0;font-weight:bold">4</span> );
+
+    <span style="color:#007f7f">// Assigning data types and mathematical Operations
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">let</span> neg_4 = -<span style="color:#ff0;font-weight:bold">4</span><span style="color:#fff;font-weight:bold">i32</span>;
+    println!(<span style="color:#0ff;font-weight:bold">&#34;abs(-4) = {}&#34;</span>, neg_4.abs() );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;abs(-4) = {}&#34;</span>, neg_4.pow(<span style="color:#ff0;font-weight:bold">2</span>) );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;round(1.2345) = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">1.2354</span><span style="color:#fff;font-weight:bold">f64</span>.round() );
+    println!(<span style="color:#0ff;font-weight:bold">&#34;ceil(1.2345) = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">1.2345</span><span style="color:#fff;font-weight:bold">f64</span>.ceil() );
+    print!(<span style="color:#0ff;font-weight:bold">&#34;sin 3.14 = {}&#34;</span>, <span style="color:#ff0;font-weight:bold">3.14</span><span style="color:#fff;font-weight:bold">f64</span>.sin() );
+}
+</code></pre></div>
+<p>Oia gw lupa ngasih tau kalo rust termasuk static type, nah biasanya bahasa-bahasa kaya rust ini sifatnya strict gt. misalnya melibatkan dua type yg berbeda kaya <code>100 / 3</code> dia ngasilin 33 aja cuy bukan 33.33333, lu harus kasih tau dia exactly <code>100 / 3.0</code> untuk dapat nilai yg benernya.</p>
+
+<p>patternnya di rust adalah object.methods misalnya <code>&quot;ini string&quot;.slice</code>, mirip2 ruby ya :)</p>
+
+<h3 id="defining-mutable-variable">defining mutable variable</h3>
+
+<p>Di Rust semuanya by default immutable, kecuali lo ngasih tau saat define variable pake keyword <code>mut</code>.</p>
+
+<p>contohnya</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#fff;font-weight:bold">fn</span> main(){
+    <span style="color:#fff;font-weight:bold">let</span> <span style="color:#fff;font-weight:bold">mut</span> sample_var = <span style="color:#ff0;font-weight:bold">10</span>;
+    println!(<span style="color:#f00">“</span>Value of the sample variable is {}<span style="color:#f00">”</span>,sample_var);
+    <span style="color:#fff;font-weight:bold">let</span> sample_var = <span style="color:#ff0;font-weight:bold">20</span>;
+    println!(<span style="color:#f00">“</span>New Value of the sample variable is {}<span style="color:#f00">”</span>,sample_var);
+}
+</code></pre></div>
+<p>kalo lo ga ngasih <code>mut</code> maka ekspresi println! yg kedua akan gagal, rust compiler akan ngasih tau lo sih kenapa-kenapanya, ini salah satu enaknya compiler rust, cerdas gt dia. lo coba deh hilangin <code>mut</code> dalam contoh diatas dan liat sendiri apa yg gw maksud denga rust compiler yg cerdas.</p>
+
+<p>bagian selanjutnya adalah operasi pada string</p>
+
+<h3 id="declaring-and-performing-string-operations">Declaring and performing string operations</h3>
+
+<p>oia karena dede inara nya gw lirik udah mulai nguap-nguap, jadi gw bagi aja review buku rust cookbook ini jadi beberapa bagian ya. lagi pula lo bakalan muntah kali baca tulisan gw yg ga bermutu ini wkwkwkwk.</p>
+
+  </article>
+
+  <br/>
+
+  
+      <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Enter a text here.</p>
+    
+     © 2018    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.example.com/posts/rust/review-rust-cookbook-bagian-1/</loc>
+    <lastmod>2018-07-27T23:38:52+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/projects/</loc>
+    <lastmod>2018-07-27T21:57:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/contact/</loc>
+    <lastmod>2018-07-27T21:55:51+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/about/</loc>
+    <lastmod>2018-07-27T21:50:38+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/golang/intro-to-golang/</loc>
+    <lastmod>2018-07-27T21:33:38+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/kubernetes/intro/</loc>
+    <lastmod>2018-07-27T21:10:22+07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="http://www.example.com/pl/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://www.example.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/</loc>
+    <lastmod>2018-07-27T23:38:52+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/</loc>
+    <lastmod>2018-07-27T23:38:52+07:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="http://www.example.com/pl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://www.example.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="http://www.example.com/pl/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://www.example.com/tags/"
+                />
+  </url>
+  
+</urlset>
