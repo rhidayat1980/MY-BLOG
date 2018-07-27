@@ -4,15 +4,15 @@ date: 2018-07-27T23:38:52+07:00
 draft: false
 ---
 
-Jadi ceritanya malam ini karena dede inara ga bisa tidur, akhirnya saya kebagian nemenin anak ini sampai dia ngantuk lagi.
+Jadi ceritanya malam ini karena dede inara ga bisa tidur, akhirnya saya kebagian temenin anak ini sampai dia ngantuk lagi.
 
-Sambil nemenin dede inara saya putuskan untuk baca buku rust, `Rust Cookbook by Vigneshwer Dhinakaran`, lumayan pikir saya.
+Sambil temenin dede inara saya putuskan untuk baca buku rust, `Rust Cookbook by Vigneshwer Dhinakaran`, lumayan pikir saya.
 
-Oke sesuai judulnya review buku, maka saya akan coba untuk mereview buku ini. Buku `rust cookbook` ini terdiri dari beberapa bab, di bagi menjadi dua bagian, bagian pertama berisi tentang basic thiing in rust seperti:
+Oke sesuai judulnya review buku, maka saya akan coba untuk mereview buku ini. Buku `rust cookbook` ini terdiri dari beberapa bab, di bagi menjadi dua bagian, bagian pertama berisi tentang basic thing in rust seperti:
 
 ### settting up Rust in Windows, Linux dan Mac
 
-bagian ini sesuai judulnya si `Vigneshwer Dhinakaran` ngasi tau soal cara instalasi rust di beberapa platform system operasi. ga ada yg istimewa sih di bab ini, karena gw bisa liat langsung di webnya rust [https://www.rust-lang.org/en-US/install.html]
+Bagian ini sesuai judulnya si `Vigneshwer Dhinakaran` ngasi tau soal cara instalasi rust di beberapa platform system operasi. ga ada yg istimewa sih di bab ini, karena gw bisa liat langsung di webnya rust [https://www.rust-lang.org/en-US/install.html]
 
 perintahnya juga simple sih
 
@@ -20,28 +20,28 @@ perintahnya juga simple sih
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-kalo lo udah berhasil nginstall rust bisa langsung cek pake command ini
+kalo lo udah berhasil nginstall rust bisa langsung cek pake command
 
 ```bash
 rustc --version
 rustc 1.27.2 (58cc626de 2018-07-18)
 ```
 
-by default ketika lo nginstall rust dia akan ngasih lu compiler(rustc), cargo atau tool yg lu pake untuk manage semua code rust lo, mulai dari scafolding, manage dependency, testing dan compile. jadi si rustc jarang lo pake juga sih, kecuali kalo lo ga mau pake cargo misalnya untuk prototype yg sederhana kaya contoh dibawah. yg lo dapat juga selain compiler dan cargo adalah rustup.
+By default ketika lo nginstall rust dia akan ngasih lu compiler(rustc), cargo atau tool yg lo pake untuk manage semua code rust lo, mulai dari scafolding, manage dependency,testing dan compile. jadi si rustc jarang lo pake juga sih, kecuali kalo lo ga mau pake cargo misalnya untuk prototype yg sederhana kaya contoh dibawah. yg lo dapat juga selain compiler dan cargo adalah rustup.
 
-si rustup ini keren sih menerut gw, nih contohnya
+Si `rustup` ini keren sih menerut gw, nih contohnya
 
 ```bash
 rustup update
 rustup doc
 ```
 
-fungsi ke dua perintah diatas adalah yg pertama ngapdate rust version, dan yg kedua lo bisa dapat dokumentasi rust di komputer lo, lumayan buat ngurangin ketergantungan sama internet, kaya pas lagi di perjalan dalam pesawat atau kereta api, cobain deh!
+Fungsi ke dua perintah diatas adalah yg pertama ngapdate rust version, dan yg kedua lo bisa dapat dokumentasi rust di komputer lo, lumayan buat ngurangin ketergantungan sama internet, kaya pas lagi di perjalan dalam pesawat atau kereta api, cobain deh!
 
 
 ### creating your first program in rust
 
-bagian ini si penulis nasih contoh gimana cara bikin program sederhana di rust.
+Bagian ini si penulis nasih contoh gimana cara bikin program sederhana di rust.
 
 ```bash
 mkdir rust_cookbook
@@ -49,7 +49,7 @@ cd rust_cookbook
 touch sample.rs
 ```
 
-lalu open sesuai editor kesukaanmu, content nya seperti dibawah ini
+Lalu open sesuai editor kesukaanmu, content nya seperti dibawah ini
 
 ```rust
 fn main(){
@@ -57,15 +57,15 @@ fn main(){
 }
 ```
 
-save lalu jalanin perintah ini
+Save lalu jalanin perintah ini
 
 ```bash
 rustc sample.rs
 ```
 
-proses compiling diatas ngasilin sebuah binary code dengan nama sample, kalo di windows ya sample.exe , udah lama banget gw ga liat .exe :)
+Proses compiling diatas ngasilin sebuah binary code dengan nama sample, kalo di windows ya sample.exe , udah lama banget gw ga liat .exe :)
 
-cara jalaninnya kalo di linux atau mac ya
+Cara jalaninnya kalo di linux atau mac ya
 
 ```bash
 ./sample
@@ -202,8 +202,3 @@ bagian selanjutnya adalah operasi pada string
 ### Declaring and performing string operations
 
 oia karena dede inara nya gw lirik udah mulai nguap-nguap, jadi gw bagi aja review buku rust cookbook ini jadi beberapa bagian ya. lagi pula lo bakalan muntah kali baca tulisan gw yg ga bermutu ini wkwkwkwk.
-
-
-
-
-
