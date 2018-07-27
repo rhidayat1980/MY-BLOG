@@ -1,25 +1,133 @@
-baseurl = "https://gohugo-amp.gohugohq.com/"
-languageCode = "en-us"
-title = "gohugo-amp starter theme"
-theme = "gohugo-amp"
-enableRobotsTXT = true
+baseurl = "http://www.example.com"
+title = "RHidayat"
+
+theme = "hugo-coder"
+
+languagecode = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "yourdiscussshortname"
 
 [params]
-    amp = true
-    ampElements = ["amp-accordion","amp-ad","amp-analytics","amp-app-banner","amp-carousel","amp-iframe","amp-dynamic-css-classes","amp-form","amp-fx-flying-carpet","amp-image-lightbox","amp-lightbox","amp-sidebar","amp-social-share","amp-sticky-ad","amp-user-notification"]
-    themeColor = "#ff1d55"
-    // adsensePublisher = "ca-pub-123456789"
-    // googleAnalytics = "UA-12345678-123"
-    // appleItunesApp = "app-id=123456789, app-argument=app-name://link/to/app-content"
-    ampManifest = "/amp-manifest.json"
-    alternatePageName = "HUGO AMP"
-    organizationLogo = "https://gohugo-amp.gohugohq.com/logo.png"
-    organizationName = "gohugohq.com"
-    organizationAddress = "Some Street 123, 12345 City"
-    socialProfiles = ["http://www.facebook.com/your-profile","http://instagram.com/yourProfile","http://www.linkedin.com/in/yourprofile","http://plus.google.com/your_profile"]
-    publisherName = "gohugohq.com"
-    publisherLogo = "https://gohugo-amp.gohugohq.com/logo-publisher.png" # https://developers.google.com/search/docs/data-types/articles#logo-guidelines
-    publisherLogoWidth = 600
-    publisherLogoHeight = 60
-    stylesheetRegular = ["/base-styling.css"] # these styles are used when amp is disabled for a specific page
-    javascriptRegular = ["/script.js"] # these scripts are used when amp is disabled for a specific page
+    author = "RHidayat"
+    description = "RHidayat's personal website"
+    keywords = "blog,devops,developer,personal"
+    info = "Kubernetes operator"
+    avatarurl = "images/avatar.jpg"
+    footercontent = "Enter a text here."
+
+    hideCredits = false
+    hideCopyright = false
+
+
+    # Custom CSS
+    custom_css = []
+
+    # Alignment of Mobile Menu items
+    itemscentered = true
+
+    # RTL support
+    rtl = false
+
+    langseparator = "|"
+
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/johndoe/"
+[[params.social]]
+    name = "Twitter"
+    weight = 2
+    url = "https://twitter.com/johndoe/"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 3
+    url = "https://www.linkedin.com/in/johndoe/"
+
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
+[[menu.main]]
+    name = "Projects"
+    weight = 3
+    url = "/projects/"
+[[menu.main]]
+    name = "Contact me"
+    weight = 5
+    url = "/contact/"
+
+[languages]
+    [languages.en]
+        languagename = "English" # The language name to be displayed in the selector.
+        title = "RHidayat"
+
+        # You can configure the theme parameter for each language.
+        [languages.en.params]
+        author = "RHidayat"
+        info = "Full Stack DevOps and Magician"
+        description = "RHidayat's personal website"
+        keywords = "blog,developer,personal"
+
+        [languages.en.menu] # It is possible to change the menu too.
+
+        [[languages.en.menu.main]]
+        name = "About"
+        weight = 1.0
+        url = "/about/"
+
+        [[languages.en.menu.main]]
+        name = "Blog"
+        weight = 2.0
+        url = "/posts/"
+
+        [[languages.en.menu.main]]
+        name = "Projects"
+        weight = 3
+        url = "/projects/"
+        [[languages.en.menu.main]]
+        name = "Contact me"
+        weight = 5
+        url = "/contact/"
+
+
+    [languages.pl]
+        languagename = "Indonesia"
+        title = "RHidayat"
+
+        [languages.pl.params]
+            author = "RHidayat"
+            description = "Strona domowa John'a Doe"
+            keywords = "blog,developer,strona domowa"
+            info = "Full Stack DevOps i Magik"
+
+        [languages.pl.menu]
+
+            [[languages.pl.menu.main]]
+            name = "O mnie"
+            weight = 1.0
+            url = "/pl/about/"
+
+            [[languages.pl.menu.main]]
+            name = "Blog"
+            weight = 2.0
+            url = "/pl/posts/"
+
+            [[languages.pl.menu.main]]
+            name = "projektowanie"
+            weight = 3
+            url = "/projektowanie/"
+            [[languages.pl.menu.main]]
+            name = "kontakt"
+            weight = 5
+            url = "/kontakt/"
